@@ -1,0 +1,29 @@
+{
+    "name": "exjs7",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "cy:dash": "cypress run --record --key ",
+        "cy:login:spec": "cypress run --record --key eaef6a0d-37ad-4e28-90e5-5f3e75c33e90 --spec 'cypress/e2e/login/login.spec.js'",
+        "cy:mainPpage": "cypress run --record --key eaef6a0d-37ad-4e28-90e5-5f3e75c33e90 --spec 'cypress/e2e/links/mainPage.spec.js'",
+        "cy:ticketBooking": "cypress run --record --key eaef6a0d-37ad-4e28-90e5-5f3e75c33e90 --spec 'cypress/e2e/tickets/ticketBooking.spec.js'",
+        "cy:run:chrome": "cypress run --record --browser chrome --key eaef6a0d-37ad-4e28-90e5-5f3e75c33e90",
+        "cy:run:firefox": "cypress run --record --browser firefox --key eaef6a0d-37ad-4e28-90e5-5f3e75c33e90",
+        "cy:run:electron": "cypress run --record --browser electron --key eaef6a0d-37ad-4e28-90e5-5f3e75c33e90",
+        "cy:chrome:firefox:parallel": "npm run cy:run:chrome --group chrome & npm run cy:run:firefox --group firefox",
+        "cy:login": "cypress run --record --key eaef6a0d-37ad-4e28-90e5-5f3e75c33e90 --spec 'cypress/integration/login/**/*'"
+    },
+    "keywords": [
+        "cypress"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cypress": "^10.6.0",
+        "cypress-parallel": "^0.9.0"
+    },
+    "devDependencies": {
+        "cypress-file-upload": "^5.0.8"
+    }
+}
